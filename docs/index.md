@@ -20,7 +20,7 @@ Bienvenue dans la documentation du projet caméra pour robot fanuc. Ce site a po
 
 ## À propos du Projet
 
-Ce projet a pour but d'améliorer une cellule robotisée de Pick & Place au sein de la mini-usine 4.0 d'UniLaSalle Amiens. En couplant un système de vision industrielle (Caméra Basler ACE / OpenCV) à un automate programmable (Siemens S7-1500), le système est capable de détecter, d'analyser et de transmettre les coordonnées spatiales (X, Y, Angle) des contenants sur un convoyeur pour qu'ils soient saisis avec précision par un bras robot (FANUC M10ia).
+Ce projet a pour but d'améliorer une cellule robotisée de Pick & Place au sein de la mini-usine 4.0 d'UniLaSalle Amiens. En couplant un système de vision industrielle (Caméra Basler ACE / OpenCV) à un automate programmable (Siemens S7-1500), le système est capable de détecter, d'analyser et de transmettre les coordonnées (X, Y, Angle) des contenants sur un convoyeur pour qu'ils soient saisis avec précision par un bras robot (FANUC M10ia).
 
 ### À qui est-il destiné ?
 
