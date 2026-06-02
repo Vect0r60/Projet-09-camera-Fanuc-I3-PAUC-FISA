@@ -1,9 +1,4 @@
----
-layout: default
-parent: Premiers pas sur le template
-nav_order: 5
-title: Modifier Votre Site Jekyll sur GitHub - Avancé
----
+
 # Modifier Votre Site Jekyll sur GitHub - Avancé
 
 Il est interessant de pouvoir construire localement son site sur son ordinateur avant de l'envoyer sur Github. Cela évite les multiples commits, et cela accelère le développement.
