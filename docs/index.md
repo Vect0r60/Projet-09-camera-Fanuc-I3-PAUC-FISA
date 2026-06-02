@@ -20,8 +20,15 @@ Bienvenue dans la documentation du projet caméra pour robot fanuc. Ce site a po
 
 ## À propos du Projet
 
-Décrivez ici en quelques lignes l'objectif et l'aperçu général de votre projet. Quel est son but ? À qui est-il destiné ? Quels problèmes cherche-t-il à résoudre ?
+Ce projet a pour but d'améliorer une cellule robotisée de Pick & Place au sein de la mini-usine 4.0 d'UniLaSalle Amiens. En couplant un système de vision industrielle (Caméra Basler ACE / OpenCV) à un automate programmable (Siemens S7-1500), le système est capable de détecter, d'analyser et de transmettre les coordonnées spatiales (X, Y, Angle) des contenants sur un convoyeur pour qu'ils soient saisis avec précision par un bras robot (FANUC M10ia).
 
+### À qui est-il destiné ?
+
+Notre projet s'adresse aux équipes pédagogiques, aux futurs étudiants de la formation, ainsi qu'au jury d'examen pour valider nos compétences d'ingénierie.
+
+### Quel problème cherche-t-il à résoudre ?
+
+Actuellement, les contenants qui arrivent sur le convoyeur de la mini-usine sont souvent mal saisis par le robot car leur positionnement n'est pas prédéterminé. Ce projet doit résoudre ce problème en supprimant les échecs de prise grâce à l'adaptation dynamique de la trajectoire de saisie du robot.
 
 ## Poster
 
