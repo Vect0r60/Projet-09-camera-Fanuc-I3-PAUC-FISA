@@ -30,15 +30,10 @@ Notre projet s'adresse aux équipes pédagogiques, aux futurs étudiants de la f
 
 Actuellement, les contenants qui arrivent sur le convoyeur de la mini-usine sont souvent mal saisis par le robot car leur positionnement n'est pas prédéterminé. Ce projet doit résoudre ce problème en supprimant les échecs de prise grâce à l'adaptation dynamique de la trajectoire de saisie du robot.
 
-## Poster
-
-Ici vous publierez le poster de votre projet.
-
-![Poster projet](images/poster.jpg)
 
 ## Vidéo
 
-Ci-dessous la vidéo de présentation de notre projet.
+Vous trouverez ci-dessous la vidéo de présentation de notre projet.
 
 <div align="center">
   <iframe 
