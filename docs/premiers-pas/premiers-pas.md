@@ -1,9 +1,4 @@
----
-layout: default
-title: Premiers pas sur le template
-nav_order: 2
-has_children: true
----
+
 # Introduction aux Sites Jekyll
 
 Ce document vise à expliquer ce qu'est un site Jekyll et comment il est utilisé dans ce repository pour la documentation et la gestion de votre projet.
