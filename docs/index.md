@@ -38,15 +38,17 @@ Ici vous publierez le poster de votre projet.
 
 ## Vidéo
 
-Ici vous publierez la vidéo de votre projet. 
-- 1min30 au format vertical
-- Présentation du projet 
-- Des explication du fonctionnement du projet
-- Des vues du projet / Prototype / Application etc... 
-- Des plans du fonctionnement (même basique ou des éléments séparés)
-- Une conclusion
-- Si en stockage local : <50mo
+Ci-dessous la vidéo de présentation de notre projet.
 
-<video src="https://www.youtube.com/shorts/tvdR9sKu9TU" controls title="Title"  style="width: 100%;"></video>
+<div align="center">
+  <iframe 
+    src="https://www.youtube.com/embed/tvdR9sKu9TU" 
+    title="Aperçu du projet" 
+    style="width: 100%; max-width: 360px; height: 640px; border-radius: 8px;" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
 
 ---
