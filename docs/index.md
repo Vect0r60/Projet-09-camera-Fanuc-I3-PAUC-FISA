@@ -14,9 +14,6 @@ Bienvenue dans la documentation du projet caméra pour robot fanuc. Ce site a po
 
 <iframe height="600" width="100%" src="https://modelembedder.net/embed?did=e696412a62cfa1b3a44b994f&wvm=v&wvmid=bd7799b56fcf8cbc93adcd07&eid=a507fa4a361bf8bf9939cbe7&elementType=ASSEMBLY" frameborder="0"></iframe>
 
-{: .warning }
->Pour intégrer la visualisation de votre projet Onshape, utilisez le site https://modelembedder.net . Activez le partage par lien via l'outil de partage de Onshape. n'oubliez pas d'activer l'option "export". Puis completez l'iframe ci-dessus avec le lien généré par le site https://modelembedder.net. Vous pouvez mettre à jour également le bouton avec le lien de partage de votre modèle.
-
 
 ## À propos du Projet
 
