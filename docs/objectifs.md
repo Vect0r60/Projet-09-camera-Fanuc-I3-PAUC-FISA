@@ -37,7 +37,7 @@ La réussite de l’intégration du système de vision industrielle repose sur l
 
 Contrainte Budgétaire : Bien que nous disposions initialement d’une enveloppe budgétaire prévisionnelle de 150 €, nous avons finalement utiliser 0 €. Cette contrainte financière nous a poussés à être ingénieux : nous avons optimisé l’utilisation des équipements industriels déjà présents dans nos laboratoires et nous nous sommes tournés vers la récupération (chutes de profilés, visserie disponible) pour concevoir notre solution sans aucun coût supplémentaire.
 
-Contrainte Temporelle : Pour réaliser ce projet, nous avions 50 heures planifiées. En pratique, ce volume horaire s'est avéré plutôt faible pour un projet de cette envergure. De plus, il était particulièrement difficile, voire impossible, de travailler sur le projet en dehors de ces heures prévues. Notre rythme en alternance impose une véritable coupure lors des périodes en entreprise, où notre charge de travail professionnelle est totale. À l'inverse, lors de nos périodes à l'école, l'emploi du temps académique est déjà surchargé. Enfin, la nature même de notre projet d’ingénierie imposait une contrainte majeure : nous avions un besoin critique d’être physiquement présents dans les laboratoires pour effectuer nos tests, câbler les modules et manipuler le robot FANUC. De ce fait, nous ne pouvions pas avancer depuis chez nous sur les parties clés.
+Contrainte Temporelle : Pour réaliser ce projet, nous avions 50 heures planifiées. En pratique, ce volume horaire est plutôt faible pour un projet de cette envergure. De plus, il est difficile, de travailler sur le projet en dehors de ces heures prévues. Notre rythme en alternance impose une coupure lors des périodes en entreprise, où notre charge de travail professionnelle est élévé. À l'inverse, lors de nos périodes à l'école, l'emploi du temps académique est déjà chargé. Enfin, la nature même de notre projet d’ingénierie imposait une contrainte majeure : nous avions un besoin critique d’être physiquement présents dans les laboratoires pour effectuer nos tests, câbler les modules et manipuler le robot FANUC.
 
 ## Infrastructures disponibles et inventaire du matériel 
 
@@ -63,7 +63,7 @@ Raspberry Pi 5 : Placée au cœur du système de vision, la Raspberry Pi 5 a ét
  
 <img width="195" height="145" alt="image" src="https://github.com/user-attachments/assets/5925d191-d7fd-41cd-bda2-2facb900f5da" />
 
-Switch Ethernet TP-Link : Il fonctionne comme une « multiprise » dédiée aux données. Au lieu de distribuer du courant, il centralise et distribue les informations de la cellule. C’est le point de connexion unique qui relie la caméra, la Raspberry Pi 5 et le robot FANUC. Grâce à lui, tous ces appareils partagent le même réseau et peuvent communiquer instantanément entre eux sans aucune latence.
+Switch Ethernet TP-Link : Il fonctionne comme une « multiprise » dédiée aux données. Au lieu de distribuer du courant, il centralise et distribue les informations de la cellule. C’est le point de connexion unique qui relie la caméra, la Raspberry Pi 5 et le robot FANUC. Grâce à lui, tous ces appareils partagent le même réseau et peuvent communiquer entre eux sans aucune latence.
  
 <img width="246" height="161" alt="image" src="https://github.com/user-attachments/assets/4e5ef571-c53c-49bd-81a9-2494587eb7fd" />
 
