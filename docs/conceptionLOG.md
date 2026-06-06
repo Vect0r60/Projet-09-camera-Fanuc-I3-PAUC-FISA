@@ -107,7 +107,7 @@ Simultanément au transfert des coordonnées numériques, le programme Ladder tr
 ## Programme Robot (FANUC M10ia)
 
 <p align="center">
-  <img width="385" height="626" alt="image" src="https://github.com/user-attachments/assets/e3cdfdcd-d3b1-4482-897d-3e651e8f981c" />
+  <img width="180" height="300" alt="image" src="https://github.com/user-attachments/assets/e3cdfdcd-d3b1-4482-897d-3e651e8f981c" />
 </p>
 
 Une fois que l'automate a transmis les données sur le réseau Profibus, le contrôleur du robot prend le relais. Son rôle est de lire ces signaux bruts, de reconstruire la position réelle du colis, puis d'exécuter la trajectoire de saisie.
