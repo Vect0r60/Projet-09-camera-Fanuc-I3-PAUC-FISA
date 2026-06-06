@@ -49,7 +49,7 @@ Infrastructure Robotique : Notre laboratoire est équipé de deux robots industr
 
 <img width="586" height="282" alt="image" src="https://github.com/user-attachments/assets/aeff5c99-1021-45b3-8520-2ff4b5aff900" />
 
-Cellule de conditionnement                       Robot FANUC M-10iA
+Cellule de conditionnement       &      Robot FANUC M-10iA
 
 L'intégration de la solution de vision industrielle au sein de l'Usine 4.0 repose sur un écosystème matériel hybride, articulé autour de quatre axes majeurs : le traitement de l'information, l'infrastructure réseau, la structure mécanique et la connectique.
 
