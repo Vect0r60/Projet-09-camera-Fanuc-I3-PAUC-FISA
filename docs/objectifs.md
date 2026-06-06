@@ -6,13 +6,13 @@ title: Objectifs du projet
 
 # Contexte & Objectifs
 
-## 1. Contexte du projet
+## Contexte du projet
 
 Dans le cadre de notre formation d'ingénieur au sein d'UniLaSalle Amiens, nous évoluons au cœur d'une Usine 4.0. Cette infrastructure moderne intègre notamment une cellule de conditionnement automatisée dédiée à la gestion d'impressions 3D.
 
 Le flux opérationnel actuel repose sur un circuit de tapis roulant qui achemine les pièces issues de l'impression 3D. En bout de ligne, un bras robotisé articulé FANUC M-10iA intervient pour saisir ces éléments et assurer leur transfert vers un second robot, chargé quant à lui de la manutention lourde et de la palettisation de la cargaison.
 
-## 2. Problématique et limites du système existant
+## Problématique et limites du système existant
 
 Bien que la cellule automatisée soit fonctionnelle, le processus souffre actuellement de limites de performance critiques liées à l'absence de retour d'information sensoriel (système en boucle ouverte). Le robot FANUC M-10iA doit saisir une boîte en carton contenant les impressions, mais sa programmation actuelle repose sur des coordonnées fixes.
 Or, la réalité physique du convoyage introduit deux incertitudes majeures :
@@ -22,7 +22,7 @@ Or, la réalité physique du convoyage introduit deux incertitudes majeures :
 	
 Ces incertitudes génèrent des échecs lors du transfert entre les deux robots (collisions, mauvaise préhension, chutes de colis), ce qui pénalise donc le rendement global (OEE/TRS) de l'Usine 4.0.
 
-## 3. Cahier des charges fonctionnel
+## Cahier des charges fonctionnel
 
 L'objectif principal du projet est d'intégrer une solution de vision industrielle low-cost permettant de guider le robot FANUC en temps réel. Le système devra remplir les fonctions suivantes :
 	- Détecter la présence de la boîte en carton en bout de convoyeur.
@@ -30,14 +30,14 @@ L'objectif principal du projet est d'intégrer une solution de vision industriel
 	- Communiquer ces corrections de trajectoire au contrôleur du robot FANUC M-10iA.
 	- Garantir une répétabilité et une fiabilité de prise supérieure à 98%.
 	
-## 4. Contraintes du projet
+## Contraintes du projet
 
 La réussite de l’intégration du système de vision industrielle repose sur le respect de plusieurs contraintes que nous avons identifié :
 Contrainte Budgétaire : Bien que nous disposions initialement d’une enveloppe budgétaire prévisionnelle de 150 €, nous avons finalement utiliser 0 €. Cette contrainte financière nous a poussés à être ingénieux : nous avons optimisé l’utilisation des équipements industriels déjà présents dans nos laboratoires et nous nous sommes tournés vers la récupération (chutes de profilés, visserie disponible) pour concevoir notre solution sans aucun coût supplémentaire.
 
 Contrainte Temporelle : Pour réaliser ce projet, nous avions 50 heures planifiées. En pratique, ce volume horaire s'est avéré plutôt faible pour un projet de cette envergure. De plus, il était particulièrement difficile, voire impossible, de travailler sur le projet en dehors de ces heures prévues. Notre rythme en alternance impose une véritable coupure lors des périodes en entreprise, où notre charge de travail professionnelle est totale. À l'inverse, lors de nos périodes à l'école, l'emploi du temps académique est déjà surchargé. Enfin, la nature même de notre projet d’ingénierie imposait une contrainte majeure : nous avions un besoin critique d’être physiquement présents dans les laboratoires pour effectuer nos tests, câbler les modules et manipuler le robot FANUC. De ce fait, nous ne pouvions pas avancer depuis chez nous sur les parties clés.
 
-## 5. Infrastructures disponibles et inventaire du matériel 
+## Infrastructures disponibles et inventaire du matériel 
 
 Pour réaliser notre projet, nous avons pu nous appuyer sur l’infrastructure industrielle moderne du Laboratoire PAUC (Production Automatisée et Usine Connectée) ainsi que sur le Makerspace d'UniLaSalle : 
 Infrastructure Makerspace : Ce pôle regroupe le parc d'imprimantes 3D qui génèrent les pièces et d’autres machines notamment 2 découpeuses laser, scie, fer à souder. 
