@@ -57,7 +57,7 @@ La transmission finale repose sur la bibliothèque Snap7, qui émule un client d
 ## Programme Automate (PLC1)
 
 <p align="center">
-  <img width="328" height="184" alt="image" src="https://github.com/user-attachments/assets/f6adb4e0-582c-4f9c-9d7b-3b34231f9d01" />
+  <img width="218" height="122" alt="image" src="https://github.com/user-attachments/assets/f6adb4e0-582c-4f9c-9d7b-3b34231f9d01" />
 </p>
 
 L'automate gère la lecture, la gestion et le transfert des données vers le robot. Configuré sous TIA Portal, il sert de passerelle entre le traitement informatique (Python) et l'action mécanique (Robot FANUC).
