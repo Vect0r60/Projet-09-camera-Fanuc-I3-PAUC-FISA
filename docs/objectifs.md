@@ -60,15 +60,21 @@ L'intégration de la solution de vision industrielle au sein de l'Usine 4.0 repo
 
 **Caméra POE :** C’est la pièce maîtresse du système de vision, fournie directement parmi le matériel existant de la cellule. Elle est installée au-dessus du tapis roulant pour capturer les images de la boîte en haute résolution. Sa technologie POE (Power over Ethernet) est un grand avantage technique : elle permet de faire passer à la fois l'alimentation électrique et les données d'images dans un seul et unique câble réseau (RJ45), ce qui simplifie grandement l'installation.
 
+<p align="center">
 <img width="203" height="182" alt="image" src="https://github.com/user-attachments/assets/4e8bb1ba-7fb9-4e71-b59d-a1456915ac44" />
+</p>
 
 **Raspberry Pi 5 :** Placée au cœur du système de vision, la Raspberry Pi 5 a été choisie pour sa puissance de calcul CPU/GPU accrue et sa gestion optimisée du multitâche. Elle fait office de calculateur embarqué : elle récupère le flux vidéo de la caméra via le réseau, exécute les scripts de traitement d'images (traitement de forme, calcul du centre de gravité et de l'orientation de la boîte) et transmet les coordonnées de correction (X, Y, θ) au contrôleur du robot.
- 
+
+<p align="center">
 <img width="195" height="145" alt="image" src="https://github.com/user-attachments/assets/5925d191-d7fd-41cd-bda2-2facb900f5da" />
+</p>
 
 **Switch Ethernet TP-Link :** Il fonctionne comme une « multiprise » dédiée aux données. Au lieu de distribuer du courant, il centralise et distribue les informations de la cellule. C’est le point de connexion unique qui relie la caméra, la Raspberry Pi 5 et le robot FANUC. Grâce à lui, tous ces appareils partagent le même réseau et peuvent communiquer entre eux sans aucune latence.
- 
+
+<p align="center">
 <img width="246" height="161" alt="image" src="https://github.com/user-attachments/assets/4e5ef571-c53c-49bd-81a9-2494587eb7fd" />
+</p>
 
 **Câblage de la cellule :** Pour assurer l'alimentation des équipements et le transit de nos données (notamment via le protocole Snap7 pour faire communiquer notre script Python avec l'Automate jusqu'aux entrées du robot FANUC), nous avons uniquement utilisé du câble Ethernet et d'autres types de câbles.
  
