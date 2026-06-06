@@ -4,7 +4,7 @@ nav_order: 1
 title: Accueil
 permalink: /
 ---
-<div style="text-align: justify;">
+
 # Bienvenue sur notre documentation
 
 Bienvenue dans la documentation du projet caméra pour robot fanuc. Ce site a pour but de fournir toutes les informations nécessaires pour comprendre, utiliser et reproduire efficacement notre projet.
@@ -43,5 +43,4 @@ Vous trouverez ci-dessous la vidéo de présentation de notre projet.
   </iframe>
 </div>
 
-</div>
 ---
