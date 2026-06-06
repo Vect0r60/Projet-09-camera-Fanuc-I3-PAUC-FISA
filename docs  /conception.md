@@ -1,8 +1,7 @@
 ---
 layout: default
-parent: Conception détaillée
 nav_order: 4
-title: Conception CAO
+title: Conception détaillée
 ---
 
 # Conception détaillée 
