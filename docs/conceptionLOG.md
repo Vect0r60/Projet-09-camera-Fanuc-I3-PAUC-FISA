@@ -13,6 +13,7 @@ title: Conception logicielle
 
 Le script Python fait le pont entre le flux vidéo brut et l’automate. Son rôle est de transformer une matrice de pixels en coordonnées physiques, puis de les injecter dans la mémoire de l'automate.
 
+
 **1.	Acquisition et traitement d’image**
 
 <img width="289" height="138" alt="image" src="https://github.com/user-attachments/assets/672e9c66-d4b3-4151-b327-713431304139" />
@@ -34,10 +35,12 @@ Pour garantir la lisibilité des informations pour le robot, les données sont e
 
 - Les valeurs flottantes sont multipliées par un facteur de précision (ex:  10) puis converties en entiers (INT), car le robot ne peut pas lire de décimal et donc de nombre réel.
 - Les signes des coordonnées (positifs ou négatifs) sont isolés et traduits sous forme de bits de polarité distincts, évitant ainsi les erreurs d'interprétation de signe.
+
   
 **3. Communication avec l’automate**
    
 La transmission finale repose sur la bibliothèque Snap7, qui émule un client de communication natif Siemens en TCP/IP. Le script Python structure les coordonnées et les bits de polarité sous forme de trame d'octets (16bits). Enfin, le programme utilise des requêtes d'écriture directes (db_write) pour injecter ces données directement dans un bloc de données de l'automate, afin que celui puisse les envoyés au robot FANUC.
+
 
 
 ## Programme Automate (PLC1)
@@ -45,6 +48,7 @@ La transmission finale repose sur la bibliothèque Snap7, qui émule un client d
   <img width="328" height="184" alt="image" src="https://github.com/user-attachments/assets/f6adb4e0-582c-4f9c-9d7b-3b34231f9d01" />
 
 L'automate gère la lecture, la gestion et le transfert des données vers le robot. Configuré sous TIA Portal, il sert de passerelle entre le traitement informatique (Python) et l'action mécanique (Robot FANUC).
+
 
 **1. Structuration et stockage des données**
 
@@ -55,6 +59,7 @@ Au sein de ce DB, chaque variable possède une adresse précise (un Offset) et u
 - Des variables de type INT (Entiers 16 bits) pour stocker les valeurs absolues des coordonnées spatiales (X, Y) et de l'orientation (Angle).
 - Des variables de type BOOL (Booléens / Bits) pour stocker les polarités de chaque coordonnée.
 - Des bits d'état et de synchronisation pour valider que les données écrites par Python sont prêtes (Data Ready).
+
   
 **2. Programme en langage LADDER**
 
@@ -79,11 +84,13 @@ Une fois que le script Python a écrit les nouvelles coordonnées dans le DB, le
 Simultanément au transfert des coordonnées numériques, le programme Ladder traite les bits de polarité stockés dans le DB. L'automate les envoie dans la mémoire du robot en utilisant des entrées numériques dédiées (Digital Inputs) via le réseau Profibus.
 
 
+
 ## Programme Robot (FANUC M10ia)
 
   <img width="385" height="626" alt="image" src="https://github.com/user-attachments/assets/e3cdfdcd-d3b1-4482-897d-3e651e8f981c" />
 
 Une fois que l'automate a transmis les données sur le réseau Profibus, le contrôleur du robot prend le relais. Son rôle est de lire ces signaux bruts, de reconstruire la position réelle du colis, puis d'exécuter la trajectoire de saisie.
+
 
 **1. Lecture et décodage des signaux (GI et DI)**
    
@@ -91,6 +98,7 @@ Le programme interne du robot vérifie en continu ses entrées pour acquérir la
 
 - **Les valeurs absolues sur les "Group Inputs" (GI) :** Le robot lit les valeurs numériques de X, Y et l'Angle via des groupements d'entrées logiques codés sur 12 bits. Ce format d'entrées groupées permet de reconstruire les coordonnées en combinant l'état des 12 lignes physiques du bus.
 - **Le signe sur les "Digital Inputs" (DI) :** En parallèle, le robot interroge des entrées digitales simples pour connaître la polarité de chaque coordonnée. Par exemple, si la DI[1] (dédiée à l'axe X) est à 1, le robot sait que la valeur lue sur le GI associé doit être interprétée comme un nombre négatif.
+
   
 **2. Reconstitution et mise à l'échelle**
 
@@ -98,6 +106,7 @@ Les données reçues par le contrôleur sont des entiers bruts qui ont été mul
 
 - **Restauration de la décimale :** Le robot divise par 10 les coordonnées lues sur les GI afin de retrouver la valeur réelle en millimètres (ou en degrés pour l'angle), restituant ainsi la précision d'un chiffre après la virgule.
 - **Calcul de la position finale :** Le script applique le signe (polarité) et injecte ces composantes (X, Y, Angle) dans un registre de position.
+
   
 **3. Saisie dynamique des colis**
 
