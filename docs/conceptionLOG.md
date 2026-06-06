@@ -54,7 +54,7 @@ La transmission finale repose sur la bibliothèque Snap7, qui émule un client d
 
 
 
-## Programme Automate (PLC1)
+## Programme Automate
 
 <p align="center">
   <img width="218" height="122" alt="image" src="https://github.com/user-attachments/assets/f6adb4e0-582c-4f9c-9d7b-3b34231f9d01" />
@@ -104,7 +104,7 @@ Simultanément au transfert des coordonnées numériques, le programme Ladder tr
 
 
 
-## Programme Robot (FANUC M10ia)
+## Programme Robot
 
 <p align="center">
   <img width="180" height="300" alt="image" src="https://github.com/user-attachments/assets/e3cdfdcd-d3b1-4482-897d-3e651e8f981c" />
