@@ -10,17 +10,17 @@ title: Validations & Analyse critque
 
 **Accomplissements :**
 
-Le support de la caméra Basler et le boîtier de protection de la Raspberry Pi 5 ont été entièrement modélisés sur le logiciel Onshape et imprimés en 3D avec succès au sein de l'école.
+Le support de la caméra Basler et le boîtier de protection de la Raspberry Pi 5 ont été entièrement modélisés sur le logiciel Onshape et imprimés en 3D au sein du Markerspace de l'école.
 
-- Régularité et Intégration : L'installation mécanique sur les profilés aluminium de la cellule du laboratoire est robuste et stable. La hauteur de capture permet un champ de vision optimal.
+- Montage du support : L'installation sur les profilés aluminium de la cellule de contionnement est robuste et stable. Elle intègre la caméra, son dissipateur thermique ainsi que le Raspberry Pi. La hauteur de fixation offre un champ de vision optimal, garantissant une acquisition d'image de qualité.
 
 <img width="310" height="220" alt="image" src="https://github.com/user-attachments/assets/a2769a2c-dfd5-40ce-a3bf-9e30791ccddb" />
 
-- Respect du Budget : L'intégralité de la solution matérielle a été conçue en exploitant les ressources existantes du laboratoire, affichant un coût de revient de 0 €, une performance remarquable pour un projet d'ingénierie.
-
+- Respect du Budget : L'intégralité de la solution matérielle a été conçue en exploitant les ressources existantes de l'école, ce qui permet d'afficher un coût total de 0 €.
+  
 **Axes d’améliorations :**
 
-Le Câblage Électrique : À ce stade, le câblage définitif (les câbles réseau et d'alimentation) n'est pas finalisé. Pour atteindre un standard industriel, ces liaisons doivent être intégrées proprement dans des goulottes afin d'éviter tout risque de déconnexion lors des mouvements de la cellule et de conflits avec les autres câbles déjà existants.
+À ce stade, le câblage définitif (les câbles réseau et d'alimentation) n'est pas finalisé. Pour atteindre un standard industriel, ces liaisons doivent être intégrées proprement dans des goulottes afin d'éviter tout risque de déconnexion lors des mouvements de la cellule et de conflits avec les autres câbles déjà existants.
 
 ## 2. Fonctionnement et résultat logiciel
 Algorithme performant et stable : Le script Python développé avec la bibliothèque OpenCV remplit parfaitement son rôle. Il applique des filtres de traitement d'image efficaces (seuillage, détection de contours) permettant d'isoler la boîte de son environnement (le convoyeur) sans faux positifs, quelles que soient les conditions de luminosité du laboratoire.
