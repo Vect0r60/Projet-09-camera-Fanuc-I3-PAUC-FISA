@@ -13,7 +13,7 @@ Le script Python ainsi que le programme Ladder sont accessibles directement sur 
 ## Programme Python
 
 <p align="center">
- <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/705a6afc-229b-499d-aab2-a08b9bb1d7a0" />
+ <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/705a6afc-229b-499d-aab2-a08b9bb1d7a0" />
 </p>
 
 Le script Python fait le pont entre le flux vidéo brut et l’automate. Son rôle est de transformer une matrice de pixels en coordonnées physiques, puis de les injecter dans la mémoire de l'automate.
@@ -28,13 +28,13 @@ Le script Python fait le pont entre le flux vidéo brut et l’automate. Son rô
 Le programme utilise l'API du constructeur (protocole GigEVision) pour piloter la caméra Basler ACE. Dès la réception du signal de l’automate, le script déclenche une capture d'image.  
 
 <p align="center">
-<img width="428" height="201" alt="image" src="https://github.com/user-attachments/assets/5b1a7573-fbee-4e24-9035-40392b43296a" />
+<img width="200" height="85" alt="image" src="https://github.com/user-attachments/assets/5b1a7573-fbee-4e24-9035-40392b43296a" />
 </p>
 
 La matrice brute obtenue est immédiatement convertie en niveaux de gris grâce à la bibliothèque OpenCV. Un filtrage par « seuillage binaire » est appliqué pour isoler le contenant de l’arrière-plan du convoyeur. L'algorithme extrait ensuite les contours de l'objet (via cv2.findContours) et applique une boîte englobante orientée (cv2.minAreaRect). Cette méthode permet d'extraire simultanément : le centre de gravité du contenant (X pixels,  Y pixels) et son inclinaison (Angle par rapport à l’axe horizontale).
 
 <p align="center">
- <img width="383" height="413" alt="image" src="https://github.com/user-attachments/assets/371aa119-de0d-49a0-a244-9e6fc5f2a49a" />
+ <img width="280" height="310" alt="image" src="https://github.com/user-attachments/assets/371aa119-de0d-49a0-a244-9e6fc5f2a49a" />
 </p>
 
  
