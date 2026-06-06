@@ -48,20 +48,35 @@ La géométrie du support intègre des fentes d'aération positionnées pour opt
 ## Conception logicielle
 
 ### Programme Python
- 
+
+ <img width="351" height="351" alt="image" src="https://github.com/user-attachments/assets/705a6afc-229b-499d-aab2-a08b9bb1d7a0" />
+
 Le script Python fait le pont entre le flux vidéo brut et l’automate. Son rôle est de transformer une matrice de pixels en coordonnées physiques, puis de les injecter dans la mémoire de l'automate.
-1.	Acquisition et traitement d’image
- 
+
+**1.	Acquisition et traitement d’image**
+
+<img width="289" height="138" alt="image" src="https://github.com/user-attachments/assets/672e9c66-d4b3-4151-b327-713431304139" />
+
 Le programme utilise l'API du constructeur (protocole GigEVision) pour piloter la caméra Basler ACE. Dès la réception du signal de l’automate, le script déclenche une capture d'image.  
+
+<img width="428" height="201" alt="image" src="https://github.com/user-attachments/assets/5b1a7573-fbee-4e24-9035-40392b43296a" />
+
 La matrice brute obtenue est immédiatement convertie en niveaux de gris grâce à la bibliothèque OpenCV. Un filtrage par « seuillage binaire » est appliqué pour isoler le contenant de l’arrière-plan du convoyeur. L'algorithme extrait ensuite les contours de l'objet (via cv2.findContours) et applique une boîte englobante orientée (cv2.minAreaRect). Cette méthode permet d'extraire simultanément : le centre de gravité du contenant (X pixels,  Y pixels) et son inclinaison (Angle par rapport à l’axe horizontale).
- 
+
+ <img width="383" height="413" alt="image" src="https://github.com/user-attachments/assets/371aa119-de0d-49a0-a244-9e6fc5f2a49a" />
+
  
 2. Préparation et conversion des données
+   
 Les coordonnées extraites étant exprimées en pixels, le script applique un facteur d'échelle (mm/pixel) déterminé par un étalonnage effectué au préalable. Cette opération permet de mettre les données sur la même unité de grandeur que le robot.
+
 Pour garantir la lisibilité des informations pour le robot, les données sont ensuite converties :
-•	Les valeurs flottantes sont multipliées par un facteur de précision (ex:  10) puis converties en entiers (INT), car le robot ne peut pas lire de décimal et donc de nombre réel.
-•	Les signes des coordonnées (positifs ou négatifs) sont isolés et traduits sous forme de bits de polarité distincts, évitant ainsi les erreurs d'interprétation de signe.
+
+- Les valeurs flottantes sont multipliées par un facteur de précision (ex:  10) puis converties en entiers (INT), car le robot ne peut pas lire de décimal et donc de nombre réel.
+- Les signes des coordonnées (positifs ou négatifs) sont isolés et traduits sous forme de bits de polarité distincts, évitant ainsi les erreurs d'interprétation de signe.
+  
 3. Communication avec l’automate
+   
 La transmission finale repose sur la bibliothèque Snap7, qui émule un client de communication natif Siemens en TCP/IP. Le script Python structure les coordonnées et les bits de polarité sous forme de trame d'octets (16bits). Enfin, le programme utilise des requêtes d'écriture directes (db_write) pour injecter ces données directement dans un bloc de données de l'automate, afin que celui puisse les envoyés au robot FANUC.
 
 
