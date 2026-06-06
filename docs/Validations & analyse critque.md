@@ -1,10 +1,10 @@
 ---
 layout: default
 nav_order: 7
-title: Bilan
+title: Validations & Analyse critque
 ---
 
-# Bilan et Analyse critique
+# Validations & Analyse critque
 
 ## 1. Montage physique et matériel
 
