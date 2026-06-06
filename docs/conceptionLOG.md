@@ -7,6 +7,9 @@ title: Conception logicielle
 
 # Conception logicielle
 
+Le script Python ainsi que le programme Ladder sont accessibles directement sur notre dépôt GitHub, dans le dossier project, via le lien disponible sur la page d'accueil.
+
+
 ## Programme Python
 
  <img width="351" height="351" alt="image" src="https://github.com/user-attachments/assets/705a6afc-229b-499d-aab2-a08b9bb1d7a0" />
