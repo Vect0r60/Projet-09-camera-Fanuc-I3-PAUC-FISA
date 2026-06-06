@@ -97,7 +97,7 @@ Une fois que le script Python a écrit les nouvelles coordonnées dans le DB, le
 - Réseau 3 : Transfert des bits de polarité
 
 <p align="center">
- <img width="672" height="385" alt="image" src="https://github.com/user-attachments/assets/afe556c7-0c2b-4c56-989a-940ee8da068d" />
+ <img width="448" height="256" alt="image" src="https://github.com/user-attachments/assets/afe556c7-0c2b-4c56-989a-940ee8da068d" />
 </p>
 
 Simultanément au transfert des coordonnées numériques, le programme Ladder traite les bits de polarité stockés dans le DB. L'automate les envoie dans la mémoire du robot en utilisant des entrées numériques dédiées (Digital Inputs) via le réseau Profibus.
