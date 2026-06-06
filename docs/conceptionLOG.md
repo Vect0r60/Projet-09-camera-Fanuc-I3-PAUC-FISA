@@ -19,7 +19,7 @@ Le script Python ainsi que le programme Ladder sont accessibles directement sur 
 Le script Python fait le pont entre le flux vidéo brut et l’automate. Son rôle est de transformer une matrice de pixels en coordonnées physiques, puis de les injecter dans la mémoire de l'automate.
 
 
-**1.	Acquisition et traitement d’image**
+### Acquisition et traitement d’image
 
 <p align="center">
 <img width="144" height="69" alt="image" src="https://github.com/user-attachments/assets/672e9c66-d4b3-4151-b327-713431304139" />
@@ -38,7 +38,7 @@ La matrice brute obtenue est immédiatement convertie en niveaux de gris grâce 
 </p>
 
  
-**2. Préparation et conversion des données**
+### Préparation et conversion des données
    
 Les coordonnées extraites étant exprimées en pixels, le script applique un facteur d'échelle (mm/pixel) déterminé par un étalonnage effectué au préalable. Cette opération permet de mettre les données sur la même unité de grandeur que le robot.
 
@@ -48,7 +48,7 @@ Pour garantir la lisibilité des informations pour le robot, les données sont e
 - Les signes des coordonnées (positifs ou négatifs) sont isolés et traduits sous forme de bits de polarité distincts, évitant ainsi les erreurs d'interprétation de signe.
 
   
-**3. Communication avec l’automate**
+### Communication avec l’automate
    
 La transmission finale repose sur la bibliothèque Snap7, qui émule un client de communication natif Siemens en TCP/IP. Le script Python structure les coordonnées et les bits de polarité sous forme de trame d'octets (16bits). Enfin, le programme utilise des requêtes d'écriture directes (db_write) pour injecter ces données directement dans un bloc de données de l'automate, afin que celui puisse les envoyés au robot FANUC.
 
@@ -63,7 +63,7 @@ La transmission finale repose sur la bibliothèque Snap7, qui émule un client d
 L'automate gère la lecture, la gestion et le transfert des données vers le robot. Configuré sous TIA Portal, il sert de passerelle entre le traitement informatique (Python) et l'action mécanique (Robot FANUC).
 
 
-**1. Structuration et stockage des données**
+### Structuration et stockage des données
 
 Pour centraliser les informations issues du retour vidéo, l'automate utilise un bloc de données global dédié, appelé DB (Data Block). Ce bloc fait office de base de données interne qui va réserver de l’espace mémoire pour accueillir la trame d'octets envoyée par le script Python via Snap7.
 
@@ -74,7 +74,7 @@ Au sein de ce DB, chaque variable possède une adresse précise (un Offset) et u
 - Des bits d'état et de synchronisation pour valider que les données écrites par Python sont prêtes (Data Ready).
 
   
-**2. Programme en langage LADDER**
+### Programme en langage LADDER
 
 La gestion du cycle et le transfert des données sont programmés en langage Ladder, structuré dans des blocs d'organisation ou de fonctions (OB/FC). Le programme se découpe en trois réseaux principaux :
 
@@ -113,7 +113,7 @@ Simultanément au transfert des coordonnées numériques, le programme Ladder tr
 Une fois que l'automate a transmis les données sur le réseau Profibus, le contrôleur du robot prend le relais. Son rôle est de lire ces signaux bruts, de reconstruire la position réelle du colis, puis d'exécuter la trajectoire de saisie.
 
 
-**1. Lecture et décodage des signaux (GI et DI)**
+### Lecture et décodage des signaux (GI et DI)
    
 Le programme interne du robot vérifie en continu ses entrées pour acquérir la pose de la pièce :
 
@@ -121,7 +121,7 @@ Le programme interne du robot vérifie en continu ses entrées pour acquérir la
 - **Le signe sur les "Digital Inputs" (DI) :** En parallèle, le robot interroge des entrées digitales simples pour connaître la polarité de chaque coordonnée. Par exemple, si la DI[1] (dédiée à l'axe X) est à 1, le robot sait que la valeur lue sur le GI associé doit être interprétée comme un nombre négatif.
 
   
-**2. Reconstitution et mise à l'échelle**
+### Reconstitution et mise à l'échelle
 
 Les données reçues par le contrôleur sont des entiers bruts qui ont été multipliés par le programme python pour éviter les virgules. Le programme du robot applique donc un traitement de mise à l'échelle :
 
@@ -129,7 +129,7 @@ Les données reçues par le contrôleur sont des entiers bruts qui ont été mul
 - **Calcul de la position finale :** Le script applique le signe (polarité) et injecte ces composantes (X, Y, Angle) dans un registre de position.
 
   
-**3. Saisie dynamique des colis**
+### Saisie dynamique des colis
 
 Une fois le registre de position actualisé et le signal d'autorisation de l'automate reçu, le robot lance l’exécution du déplacement. Au lieu de descendre sur une trajectoire fixe, il applique le décalage calculé à sa trajectoire. Le bras articulé ajuste l'approche de sa pince en translation (X, Y) et pivote sur l’axe R3 (Angle) pour s'aligner parfaitement avec le colis. Le robot peut ensuite saisir le colis en conséquence, garantissant une prise fiable quelle que soit la position de la pièce sur le convoyeur.
- 
+
