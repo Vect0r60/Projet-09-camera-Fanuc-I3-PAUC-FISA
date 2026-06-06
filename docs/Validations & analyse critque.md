@@ -23,14 +23,17 @@ Le support de la caméra Basler et le boîtier de protection de la Raspberry Pi 
 À ce stade, le câblage définitif (les câbles réseau et d'alimentation) n'est pas finalisé. Pour atteindre un standard industriel, ces liaisons doivent être intégrées proprement dans des goulottes afin d'éviter tout risque de déconnexion lors des mouvements de la cellule et de conflits avec les autres câbles déjà existants.
 
 ## 2. Fonctionnement et résultat logiciel
-Algorithme performant et stable : Le script Python développé avec la bibliothèque OpenCV remplit parfaitement son rôle. Il applique des filtres de traitement d'image efficaces (seuillage, détection de contours) permettant d'isoler la boîte de son environnement (le convoyeur) sans faux positifs, quelles que soient les conditions de luminosité du laboratoire.
 
+**Accomplissements :**
 
-A faire gauthier succès et limites partie programmation
-Les points bloquants : 
-Complexité exponentielle de la partie logicielle : La mise en place de la chaîne de communication multi-protocoles et multi-matériels (Script Python avec OpenCV -> Automate en Ladder via Snap7 -> Robot Fanuc via entrées numériques) a représenté une complexité algorithmique et structurelle importante. Cette superposition de couches logicielles augmente également le risque de problèmes et d’erreurs et rend donc la maintenance ou le diagnostic plus difficile. 
-Perte de précision potentielle lors de la conversion : La méthode de conversion actuelle implique de transformer les coordonnées réelles en nombres entiers (multipliés par 10) pour les transiter via des groupements d'entrées numériques (GI 12 bits) sur le robot, qui doit ensuite les diviser à nouveau. Ce processus de troncature et de reformatage des variables peut occasionner une légère perte de précision géométrique ou des limitations sur la plage opérationnelle des mouvements.
-Sensibilité de l'analyse d'image : Le script Python s'appuie sur le filtrage des nuances de gris (bibliothèque OpenCV) pour localiser le colis et déterminer son angle. Cette approche par seuillage est particulièrement sensible aux variations de la luminosité ambiante du laboratoire PAUC, ce qui peut fausser la détection si l'éclairage de la pièce change.
+La partie logicielle du projet est partiellement fonctionnelle et s'articule autour de trois accomplissements majeurs :
+
+- Retour vidéo : Le script Python parvient à récupérer avec succès le retour vidéo en direct de la caméra Basler. Les images sont capturées en temps réel pour être directement exploitées par l'algorithme.
+  
+-	Récupération des coordonnées : Grâce à la bibliothèque OpenCV, le script traite l'image pour détecter le contenant, filtrer le bruit visuel et isoler avec précision ses coordonnées spatiales X, Y ainsi que son angle d'orientation.
+  
+- Communication avec l’automate : La communication avec l'automate fonctionne. Le script Python transmet bien les données de position calculées et gère l'échange de signaux au programme Ladder. Il est aussi capable de récupérer la valeur de détection du capteur de présence afin d’exécuter prise d’image.
+
 
 ## 3.	Répartition du temps
 
