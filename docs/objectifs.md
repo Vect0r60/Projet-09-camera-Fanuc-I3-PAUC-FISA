@@ -58,7 +58,7 @@ Cellule de conditionnement       &      Robot FANUC M-10iA
 
 L'intégration de la solution de vision industrielle au sein de l'Usine 4.0 repose sur un écosystème matériel hybride, articulé autour de quatre axes majeurs : le traitement de l'information, l'infrastructure réseau, la structure mécanique et la connectique.
 
-**Caméra POE :** C’est la pièce maîtresse du système de vision, fournie directement parmi le matériel existant de la cellule. Elle est installée au-dessus du tapis roulant pour capturer les images de la boîte en haute résolution. Sa technologie POE (Power over Ethernet) est un grand avantage technique : elle permet de faire passer à la fois l'alimentation électrique et les données d'images dans un seul et unique câble réseau (RJ45), ce qui simplifie grandement l'installation.
+**Caméra Balser Ace 2 :** C’est la pièce maîtresse du système de vision, fournie directement parmi le matériel existant de la cellule. Elle est installée au-dessus du tapis roulant pour capturer les images de la boîte en haute résolution. Sa technologie POE (Power over Ethernet) est un grand avantage technique : elle permet de faire passer à la fois l'alimentation électrique et les données d'images dans un seul et unique câble réseau (RJ45), ce qui simplifie grandement l'installation.
 
 <p align="center">
 <img width="203" height="182" alt="image" src="https://github.com/user-attachments/assets/4e8bb1ba-7fb9-4e71-b59d-a1456915ac44" />
