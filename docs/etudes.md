@@ -12,7 +12,7 @@ Au cours de l'étude, plusieurs approches ont été envisagées pour intégrer l
 
 La première idée consistait à embarquer la caméra directement sur le bras du robot. Une autre alternative prévoyait de la suspendre à la grille supérieure de l'enceinte de sécurité. Néanmoins, ces configurations imposaient de lourdes contraintes techniques, notamment la nécessité de gérer la dynamique et les trajectoires du robot afin d'éviter tout risque de collision ou de détérioration du matériel de vision. 
 
-Pour s'affranchir de ces contraintes, le choix s'est porté sur l'utilisation des profilés en aluminium de l'armature de la cellule comme structure porteuse. Cette solution offre une excellente rigidité, une grande liberté de positionnement et une sécurité totale vis-à-vis des mouvements du robot. Un profilé supplémentaire a été découpé et ajusté afin de suspendre la caméra parfaitement perpendiculaire au convoyeur (visée zénithale). Cette structure accueille également l'unité de traitement, à savoir le Raspberry Pi 5. 
+Pour s'affranchir de ces contraintes, le choix s'est porté sur l'utilisation des profilés en aluminium de l'armature de la cellule comme structure porteuse. Cette solution offre une excellente rigidité, une grande liberté de positionnement et une sécurité totale vis-à-vis des mouvements du robot. Un profilé supplémentaire a été découpé et ajusté afin de suspendre la caméra parfaitement perpendiculaire au convoyeur. Cette structure accueille également l'unité de traitement, à savoir le Raspberry Pi 5. 
 
 <p align="center">
 <img width="442" height="252" alt="image" src="https://github.com/user-attachments/assets/8673b654-0c8c-46d7-a460-75303e2d2513" />
