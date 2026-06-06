@@ -10,7 +10,7 @@ title: Objectifs du projet
 
 Dans le cadre de notre formation d'ingénieur au sein d'UniLaSalle Amiens, nous évoluons au cœur d'une Usine 4.0. Cette infrastructure moderne intègre notamment une cellule de conditionnement automatisée dédiée à la gestion d'impressions 3D.
 
-Le flux opérationnel actuel repose sur un circuit de tapis roulant qui achemine les pièces issues de l'impression 3D. En bout de ligne, un bras robotisé articulé FANUC M-10iA intervient pour saisir ces éléments et assurer leur transfert vers un second robot, chargé quant à lui de la manutention lourde et de la palettisation de la cargaison.
+Le flux opérationnel actuel repose sur un circuit de tapis roulant qui achemine les pièces issues de l'impression 3D. En bout de ligne, un bras robotisé articulé FANUC M-10iA intervient pour saisir ces éléments et assurer leur transfert vers un second robot, chargé quant à lui de la manutention et de la palettisation de la cargaison.
 
 ## Problématique et limites du système existant
 
@@ -25,10 +25,11 @@ Ces incertitudes génèrent des échecs lors du transfert entre les deux robots 
 ## Cahier des charges fonctionnel
 
 L'objectif principal du projet est d'intégrer une solution de vision industrielle low-cost permettant de guider le robot FANUC en temps réel. Le système devra remplir les fonctions suivantes :
-	- Détecter la présence de la boîte en carton en bout de convoyeur.
-	- Calculer les coordonnées spatiales précises (X, Y) et l'angle de rotation (θ) de la boîte.
-	- Communiquer ces corrections de trajectoire au contrôleur du robot FANUC M-10iA.
-	- Garantir une répétabilité et une fiabilité de prise supérieure à 98%.
+
+- Détecter la présence de la boîte en carton en bout de convoyeur.
+- Calculer les coordonnées spatiales précises (X, Y) et l'angle de rotation (θ) de la boîte.
+- Communiquer ces corrections de trajectoire au contrôleur du robot FANUC M-10iA.
+- Garantir une répétabilité et une fiabilité de prise supérieure à 98%.
 	
 ## Contraintes du projet
 
