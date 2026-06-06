@@ -89,15 +89,15 @@ Une fois que l'automate a transmis les données sur le réseau Profibus, le cont
    
 Le programme interne du robot vérifie en continu ses entrées pour acquérir la pose de la pièce :
 
-- Les valeurs absolues sur les "Group Inputs" (GI) : Le robot lit les valeurs numériques de X, Y et l'Angle via des groupements d'entrées logiques codés sur 12 bits. Ce format d'entrées groupées permet de reconstruire les coordonnées en combinant l'état des 12 lignes physiques du bus.
-- Le signe sur les "Digital Inputs" (DI) : En parallèle, le robot interroge des entrées digitales simples pour connaître la polarité de chaque coordonnée. Par exemple, si la DI[1] (dédiée à l'axe X) est à 1, le robot sait que la valeur lue sur le GI associé doit être interprétée comme un nombre négatif.
+- **Les valeurs absolues sur les "Group Inputs" (GI) :** Le robot lit les valeurs numériques de X, Y et l'Angle via des groupements d'entrées logiques codés sur 12 bits. Ce format d'entrées groupées permet de reconstruire les coordonnées en combinant l'état des 12 lignes physiques du bus.
+- **Le signe sur les "Digital Inputs" (DI) :** En parallèle, le robot interroge des entrées digitales simples pour connaître la polarité de chaque coordonnée. Par exemple, si la DI[1] (dédiée à l'axe X) est à 1, le robot sait que la valeur lue sur le GI associé doit être interprétée comme un nombre négatif.
   
 **2. Reconstitution et mise à l'échelle**
 
 Les données reçues par le contrôleur sont des entiers bruts qui ont été multipliés par le programme python pour éviter les virgules. Le programme du robot applique donc un traitement de mise à l'échelle :
 
-- Restauration de la décimale : Le robot divise par 10 les coordonnées lues sur les GI afin de retrouver la valeur réelle en millimètres (ou en degrés pour l'angle), restituant ainsi la précision d'un chiffre après la virgule.
-- Calcul de la position finale : Le script applique le signe (polarité) et injecte ces composantes (X, Y, Angle) dans un registre de position.
+- **Restauration de la décimale :** Le robot divise par 10 les coordonnées lues sur les GI afin de retrouver la valeur réelle en millimètres (ou en degrés pour l'angle), restituant ainsi la précision d'un chiffre après la virgule.
+- **Calcul de la position finale :** Le script applique le signe (polarité) et injecte ces composantes (X, Y, Angle) dans un registre de position.
   
 **3. Saisie dynamique des colis**
 
