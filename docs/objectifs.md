@@ -35,9 +35,11 @@ L'objectif principal du projet est d'intégrer une solution de vision industriel
 
 La réussite de l’intégration du système de vision industrielle repose sur le respect de plusieurs contraintes que nous avons identifié :
 
-**Contrainte Budgétaire :** Bien que nous disposions initialement d’une enveloppe budgétaire prévisionnelle de 150 €, nous avons finalement utiliser 0 €. Cette contrainte financière nous a poussés à être ingénieux : nous avons optimisé l’utilisation des équipements industriels déjà présents dans nos laboratoires et nous nous sommes tournés vers la récupération (chutes de profilés, visserie disponible) pour concevoir notre solution sans aucun coût supplémentaire.
+**Contraite Techniques :** L'espace restreint au sein de la cellule de conditionnement impose la conception sur mesure de supports pour la caméra et le Raspberry, tout en garantissant la rigidité face aux vibrations et la dissipation thermique. Le projet exige également une connexion logicielle et matérielle, nécessitant une communication complexe entre le scripts Python, l'automate et le robot.
 
-**Contrainte Temporelle :** Pour réaliser ce projet, nous avions 50 heures planifiées. En pratique, ce volume horaire est plutôt faible pour un projet de cette envergure. De plus, il est difficile, de travailler sur le projet en dehors de ces heures prévues. Notre rythme en alternance impose une coupure lors des périodes en entreprise, où notre charge de travail professionnelle est élévé. À l'inverse, lors de nos périodes à l'école, l'emploi du temps académique est déjà chargé. Enfin, la nature même de notre projet d’ingénierie imposait une contrainte majeure : nous avions un besoin critique d’être physiquement présents dans les laboratoires pour effectuer nos tests, câbler les modules et manipuler le robot FANUC.
+**Contrainte Budgétaire :** Le projet s'inscrit dans un cadre budgétaire restreint, avec un budget maximal de 150 euros. Cette contrainte impose une gestion rigoureuse des coûts, notamment à travers le choix de composants abordables et, dans notre cas, le recours au matériel mis à disposition par l'école.
+
+**Contrainte Temporelle :** La réalisation de ce projet est soumise à plusieurs contraintes temporelles, à commencer par un volume restreint de 50 heures planifiées. De plus, le rythme de l'alternance impose un fractionnement du calendrier, tandis que la nature même de ce projet implique une dépendance aux infrastructures, exigeant une présence physique en laboratoire pour effectuer les câblages, valider les tests et se connecter à l'automate.
 
 ## Infrastructures disponibles et inventaire du matériel 
 
