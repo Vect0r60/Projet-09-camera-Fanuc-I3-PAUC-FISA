@@ -76,6 +76,6 @@ L'intégration de la solution de vision industrielle au sein de l'Usine 4.0 repo
 <img width="246" height="161" alt="image" src="https://github.com/user-attachments/assets/4e5ef571-c53c-49bd-81a9-2494587eb7fd" />
 </p>
 
-**Câblage de la cellule :** Pour assurer l'alimentation des équipements et le transit de nos données (notamment via le protocole Snap7 pour faire communiquer notre script Python avec l'Automate jusqu'aux entrées du robot FANUC), nous avons uniquement utilisé du câble Ethernet et d'autres types de câbles.
+**Câblage de la cellule :** Pour assurer l'alimentation des équipements et le transit de nos données (notamment pour faire communiquer notre script Python avec l'Automate jusqu'aux entrées du robot FANUC), nous avons uniquement utilisé du câble Ethernet.
  
 
