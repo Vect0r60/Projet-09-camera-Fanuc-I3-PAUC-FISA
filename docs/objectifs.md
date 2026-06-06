@@ -20,7 +20,7 @@ Or, la réalité physique du convoyage introduit deux incertitudes majeures :
 - Variabilité de la position (Translation) : En raison des frottements et de la cinématique du tapis roulant, la position finale de la boîte en carton peut être légèrement déviée de sa trajectoire nominale.
 - Variabilité de l'orientation (Rotation) : Selon la manière dont la boîte se dépose sur le tapis, son angle d'orientation varie. Cela pose un problème majeur car son ouverture supérieure n'est plus correctement alignée pour la réception de la cargaison.
 	
-Ces incertitudes génèrent des échecs lors du transfert entre les deux robots (collisions, mauvaise préhension, chutes de colis), ce qui pénalise donc le rendement global (OEE/TRS) de l'Usine 4.0.
+Ces incertitudes génèrent des échecs lors du transfert entre les deux robots (collisions, mauvaise préhension, chutes de colis), ce qui pénalise donc le rendement global de l'Usine 4.0.
 
 ## Cahier des charges fonctionnel
 
@@ -33,6 +33,7 @@ L'objectif principal du projet est d'intégrer une solution de vision industriel
 ## Contraintes du projet
 
 La réussite de l’intégration du système de vision industrielle repose sur le respect de plusieurs contraintes que nous avons identifié :
+
 Contrainte Budgétaire : Bien que nous disposions initialement d’une enveloppe budgétaire prévisionnelle de 150 €, nous avons finalement utiliser 0 €. Cette contrainte financière nous a poussés à être ingénieux : nous avons optimisé l’utilisation des équipements industriels déjà présents dans nos laboratoires et nous nous sommes tournés vers la récupération (chutes de profilés, visserie disponible) pour concevoir notre solution sans aucun coût supplémentaire.
 
 Contrainte Temporelle : Pour réaliser ce projet, nous avions 50 heures planifiées. En pratique, ce volume horaire s'est avéré plutôt faible pour un projet de cette envergure. De plus, il était particulièrement difficile, voire impossible, de travailler sur le projet en dehors de ces heures prévues. Notre rythme en alternance impose une véritable coupure lors des périodes en entreprise, où notre charge de travail professionnelle est totale. À l'inverse, lors de nos périodes à l'école, l'emploi du temps académique est déjà surchargé. Enfin, la nature même de notre projet d’ingénierie imposait une contrainte majeure : nous avions un besoin critique d’être physiquement présents dans les laboratoires pour effectuer nos tests, câbler les modules et manipuler le robot FANUC. De ce fait, nous ne pouvions pas avancer depuis chez nous sur les parties clés.
