@@ -92,7 +92,7 @@ Le programme Ladder surveille l'état du capteur de la cellule. Lorsqu'un conten
 <img width="945" height="205" alt="image" src="https://github.com/user-attachments/assets/d7c2047d-8f28-4610-a3d5-0c414e51cda4" />
 </p>
 
-Une fois que le script Python a écrit les nouvelles coordonnées dans le DB, le programme Ladder entre dans une phase de transfert. Il récupère les valeurs numériques (X, Y, Angle). L'automate envoi ensuite ces données directement dans la mémoire du contrôleur du robot FANUC en utilisant une connexion profibus.
+Une fois que le script Python a écrit les nouvelles coordonnées dans le DB, le programme Ladder entre dans une phase de transfert. Il récupère les valeurs numériques (X, Y, Angle). L'automate envoie ensuite ces données directement dans la mémoire du contrôleur du robot FANUC en utilisant une connexion Profibus.
 
 - Réseau 3 : Transfert des bits de polarité
 
