@@ -23,7 +23,11 @@ L'algorithme OpenCV traite l'image capturée. Le script isole le contenant, dét
 
 Nous avons aussi pu validé la communication descendante. Les coordonnées calculées par Python sont transmises vers l'automate, qui les réceptionne et les stocke dans le bloc de données (DB) interne, ce qui doit permettre de les envoyer au robot par la suite.
 
+# Difficultés techniques et solutions
+
 <img width="119" height="227" alt="image" src="https://github.com/user-attachments/assets/8c74df1a-83e7-48cb-95cf-0ddd10e78e27" />
 
 La dernière phase d'essais ne s'est pas montrée concluante. En effet, la réception des données sur le contrôleur FANUC n'a pas pu être finalisée. Par conséquent, la reconversion des coordonnées ainsi que le repositionnement dynamique du robot n'ont pas pu être validés.
+
+Cela s'explique par le fait que la structure initiale du bloc de données — configurée en 8 bits d'entrée et 10 bits de sortie — a dû être modifiée en raison d'une contrainte technique liée à l'architecture mémoire du contrôleur FANUC. Ce dernier ne disposait pas d'une gestion de mémoire optimisée pour traiter des données asymétriques ou de tailles non standardisées. Afin de garantir la compatibilité et d'éviter les erreurs de communication, la table d'échange a été harmonisée sur un format standard de 16 bits en entrée et 16 bits en sortie. Malgré cette reconfiguration, la liaison n'a pas pu être établie, et le manque de temps a fait de cette étape un point bloquant pour la finalisation du projet.
 
