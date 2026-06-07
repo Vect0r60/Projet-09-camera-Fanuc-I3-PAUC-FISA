@@ -50,7 +50,7 @@ Pour garantir la lisibilité des informations pour le robot, les données sont e
   
 ### 3. Communication avec l’automate
    
-La transmission finale repose sur la bibliothèque Snap7, qui émule un client de communication natif Siemens en TCP/IP. Le script Python structure les coordonnées et les bits de polarité sous forme de trame d'octets (16bits). Enfin, le programme utilise des requêtes d'écriture directes (db_write) pour injecter ces données directement dans un bloc de données de l'automate, afin que celui puisse les envoyés au robot FANUC.
+La transmission finale repose sur la bibliothèque Snap7, qui émule un client de communication natif Siemens en TCP/IP. Le script Python structure les coordonnées et les bits de polarité sous forme de trame d'octets (16bits). Enfin, le programme utilise des requêtes d'écriture directes (db_write) pour injecter ces données directement dans un bloc de données de l'automate, afin que celui puisse les envoyer au robot FANUC.
 
 
 
