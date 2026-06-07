@@ -1,10 +1,11 @@
 ---
 layout: default
 nav_order: 5
-title: Réalisations
+parent: Réalisations
+title: Réalisations montage
 ---
 
-# Réalisations
+# Réalisations montage
 
 En ce qui concerne la phase de montage de notre projet, un test d’assemblage a été réalisé afin d’évaluer et de valider le rendu final de l’installation. 
 
