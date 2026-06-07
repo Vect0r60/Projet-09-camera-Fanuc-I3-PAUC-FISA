@@ -25,6 +25,9 @@ Nous avons aussi pu validé la communication descendante. Les coordonnées calcu
 
 # Difficultés techniques et solutions
 
+## Communication avec le contrôleur FANUC
+
+
 <img width="119" height="227" alt="image" src="https://github.com/user-attachments/assets/8c74df1a-83e7-48cb-95cf-0ddd10e78e27" />
 
 La dernière phase d'essais ne s'est pas montrée concluante. En effet, la réception des données sur le contrôleur FANUC n'a pas pu être finalisée. Par conséquent, la reconversion des coordonnées ainsi que le repositionnement dynamique du robot n'ont pas pu être validés.
