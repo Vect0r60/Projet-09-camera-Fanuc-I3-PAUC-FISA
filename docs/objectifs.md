@@ -33,9 +33,9 @@ L'objectif principal du projet est d'intégrer une solution de vision industriel
 	
 ## Contraintes du projet
 
-La réussite de l’intégration du système de vision industrielle repose sur le respect de plusieurs contraintes que nous avons identifié :
+La réussite de l’intégration du système de vision industrielle repose sur le respect de plusieurs contraintes que nous avons identifiées :
 
-**Contraite Techniques :** L'espace restreint au sein de la cellule de conditionnement impose la conception sur mesure de supports pour la caméra et le Raspberry, tout en garantissant la rigidité face aux vibrations et la dissipation thermique. Le projet exige également une connexion logicielle et matérielle, nécessitant une communication complexe entre le scripts Python, l'automate et le robot.
+**Contraites Techniques :** L'espace restreint au sein de la cellule de conditionnement impose la conception sur mesure de supports pour la caméra et le Raspberry, tout en garantissant la rigidité face aux vibrations et la dissipation thermique. Le projet exige également une connexion logicielle et matérielle, nécessitant une communication complexe entre le scripts Python, l'automate et le robot.
 
 **Contrainte Budgétaire :** Le projet s'inscrit dans un cadre budgétaire restreint, avec un budget maximal de 150 euros. Cette contrainte impose une gestion rigoureuse des coûts, notamment à travers le choix de composants abordables et, dans notre cas, le recours au matériel mis à disposition par l'école.
 
