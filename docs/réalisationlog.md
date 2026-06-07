@@ -21,5 +21,7 @@ La réception du signal provenant du capteur de présence de la cellule a été 
 
 L'algorithme OpenCV traite l'image capturée. Le script isole le contenant, détermine ses coordonnées géométriques (X, Y) ainsi que son angle d'orientation, et les affiche sur le retour vidéo afin de permettre une vérification des valeurs en direct.
 
-La dernière phase d'essais a validé la communication descendante. Les coordonnées calculées par Python sont transmises vers l'automate, qui les réceptionne et les stocke dans le bloc de données (DB) interne.
+Nous avons aussi pu validé la communication descendante. Les coordonnées calculées par Python sont transmises vers l'automate, qui les réceptionne et les stocke dans le bloc de données (DB) interne, ce qui doit permettre de les envoyer au robot par la suite.
+
+La dernière phase d'essais ne s'est pas montrée concluante. En effet, la réception des données sur le contrôleur FANUC n'a pas pu être finalisée. Par conséquent, la reconversion des coordonnées ainsi que le repositionnement dynamique du robot n'ont pas pu être validés.
 
