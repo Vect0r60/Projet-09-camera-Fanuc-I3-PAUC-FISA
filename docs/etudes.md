@@ -32,9 +32,9 @@ Pour assembler la structure, nous avons utilisé des inserts, des écrous et des
 
 ## Fonctionnement partie logicielle
  
-Le cycle de fonctionnement s'amorce dès qu'un contenant en mouvement sur le convoyeur coupe le faisceau d'un capteur de présence. Cette détection est transmise au FANUC M10ia, qui relaie l'information à l'Automate (PLC1). Dès la réception de ce signal, l'automate, génère un ordre de déclenchement automatique (trigger) à destination de notre script Python.
+Le cycle de fonctionnement s'amorce dès qu'un contenant en mouvement sur le convoyeur coupe le faisceau d'un capteur de présence. Cette détection est transmise au FANUC M10ia, qui relaie l'information à l'Automate (PLC1). Dès la réception de ce signal, l'automate génère un ordre de déclenchement automatique (trigger) à destination de notre script Python.
 
-Le script Python lance ensuite l'exécution d'une capture d'image par la caméra Basler ACE. Une fois l’image récupéré, l'algorithme isole le contenant pour récupérer sa position exacte. Il calcul alors précisément ses coordonnées ainsi que son orientation sur le tapis (X, Y et Angle). Ces données sont transformées en coordonnées métriques et renvoyer vers l’automate.
+Le script Python lance ensuite l'exécution d'une capture d'image par la caméra Basler ACE. Une fois l’image récupérée, l'algorithme isole le contenant pour récupérer sa position exacte. Il calcule alors précisément ses coordonnées ainsi que son orientation sur le tapis (X, Y et Angle). Ces données sont transformées en coordonnées métriques et renvoyées vers l’automate.
 
 Enfin, l’automate assure le stockage des données et envoie les variables de position converties vers la mémoire du robot FANUC. Ainsi, le robot n'exécute plus une trajectoire fixe et théorique, mais adapte la position et l'angle de sa pince à l'arrivée de chaque contenant.
 
