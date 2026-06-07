@@ -12,7 +12,7 @@ title: Validations & Analyse critque
 
 Le support de la caméra Basler et le boîtier de protection de la Raspberry Pi 5 ont été entièrement modélisés sur le logiciel Onshape et imprimés en 3D au sein du Markerspace de l'école.
 
-- L'installation sur les profilés aluminium de la cellule de contionnement est robuste et stable. Elle intègre la caméra, son dissipateur thermique ainsi que le Raspberry Pi. La hauteur de fixation offre un champ de vision optimal, garantissant une acquisition d'image de qualité.
+- L'installation sur les profilés aluminium de la cellule de conditionnement est robuste et stable. Elle intègre la caméra, son dissipateur thermique ainsi que le Raspberry Pi. La hauteur de fixation offre un champ de vision optimal, garantissant une acquisition d'image de qualité.
 
 <img width="310" height="220" alt="image" src="https://github.com/user-attachments/assets/a2769a2c-dfd5-40ce-a3bf-9e30791ccddb" />
 
@@ -36,7 +36,7 @@ La partie logicielle du projet est partiellement fonctionnelle et se concentre a
 
   <img width="304" height="325" alt="image" src="https://github.com/user-attachments/assets/f5d08612-74ec-42b3-8675-06bc97ec5fdb" />
  
-- La communication via snap7 avec l'automate fonctionne. Le script Python transmet bien les données de position calculées et gère l'échange de signaux au programme Ladder. Il est aussi capable de récupérer la valeur de détection du capteur de présence afin d’exécuter prise d’image.
+- La communication via snap7 avec l'automate fonctionne. Le script Python transmet bien les données de position calculées et gère l'échange de signaux au programme Ladder. Il est aussi capable de récupérer la valeur de détection du capteur de présence afin d’exécuter la prise d’image.
 
 **Axes d’améliorations :**
 
@@ -54,7 +54,7 @@ Ce graphique montre que si la modélisation CAO et l'assemblage physique du supp
 
 # Conclusion Générale
 
-Ce projet de fin d'études a été particulièrement formateur. Il nous a montré la réalité du terrain : en théorie, faire communiquer des machines semble simple. Même si la cellule n'est pas encore prête pour une production 100 % autonome avec l’intégration de notre projet, toute la base mécanique et le système de vision industrielle fonctionnent parfaitement. Le projet a des bases solides, et nous avons ciblé exactement les dernier problèmes techniques à résoudre.
+Ce projet de fin d'études a été particulièrement formateur. Il nous a montré la réalité du terrain : en théorie, faire communiquer des machines semble simple. Même si la cellule n'est pas encore prête pour une production 100 % autonome avec l’intégration de notre projet, toute la base mécanique et le système de vision industrielle fonctionnent parfaitement. Le projet a des bases solides, et nous avons ciblé exactement les derniers problèmes techniques à résoudre.
 
 Au-delà de l'aspect purement technique, ce projet a été une expérience extrêmement motivante pour l'ensemble de l'équipe. Nous avons particulièrement apprécié évoluer au sein du laboratoire PAUC, qui offre un environnement technologique et industriel concret. Travailler sur du matériel de standard d'usine (automates Siemens, robots FANUC, caméras Basler) nous a permis de retrouver les exigences, les configurations et les problématiques terrain que nous côtoyons au quotidien dans nos entreprises respectives. Cette synergie entre notre formation à UniLaSalle et notre expérience professionnelle a renforcé notre autonomie et notre rigueur dans la gestion d'un projet d'intégration complexe.
 
