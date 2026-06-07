@@ -23,5 +23,7 @@ L'algorithme OpenCV traite l'image capturée. Le script isole le contenant, dét
 
 Nous avons aussi pu validé la communication descendante. Les coordonnées calculées par Python sont transmises vers l'automate, qui les réceptionne et les stocke dans le bloc de données (DB) interne, ce qui doit permettre de les envoyer au robot par la suite.
 
+<img width="537" height="682" alt="image" src="https://github.com/user-attachments/assets/8c74df1a-83e7-48cb-95cf-0ddd10e78e27" />
+
 La dernière phase d'essais ne s'est pas montrée concluante. En effet, la réception des données sur le contrôleur FANUC n'a pas pu être finalisée. Par conséquent, la reconversion des coordonnées ainsi que le repositionnement dynamique du robot n'ont pas pu être validés.
 
