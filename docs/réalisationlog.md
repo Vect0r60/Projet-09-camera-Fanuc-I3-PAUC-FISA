@@ -7,13 +7,15 @@ title: Réalisations logicielle
 
 # Réalisations logicielle
 
-Pour valider le comportement du système de vision et sa communication, une série d'essais progressifs a été réalisée sur la cellule :
+Pour valider le comportement du système de vision et sa communication, une série d'essais a été réalisée dans la cellule et sur l'automate :
 
-Les premiers tests ont permis de confirmer la bonne communication avec la caméra Basler. Le script Python récupère avec succès le flux vidéo en direct, sans latence ni perte de frame, garantissant la disponibilité des images pour le traitement.
+<img width="718" height="956" alt="image" src="https://github.com/user-attachments/assets/0a26b158-fc99-4072-b84c-c5e2f555ce24" />
 
-Nous avons validé la réception du signal provenant du capteur de présence de la cellule. Dès que l'automate détecte un contenant, il transmet un ordre au script Python, déclenchant instantanément la capture d'écran de l'image à analyser.
+Les premiers tests ont confirmé la communication avec la caméra Basler. Le script Python assure la récupération continue du flux vidéo en direct, rendant les images disponibles pour la phase de traitement.
 
-Lors des essais en condition, l'algorithme OpenCV a correctement traité l'image capturée. Le script parvient à isoler le contenant et à déterminer ses coordonnées géométriques (X, Y) ainsi que son angle d'orientation.
+La réception du signal provenant du capteur de présence de la cellule a été validée. Dès que l'automate détecte un contenant, il transmet une instruction au script Python, ce qui déclenche la capture de l'image à analyser.
 
-La dernière phase d'essais a validé la communication descendante. Les coordonnées calculées par Python sont envoyées avec succès vers l'automate, qui les réceptionne et les stocke dans sa base de données (DB) interne.
+L'algorithme OpenCV traite l'image capturée. Le script isole le contenant, détermine ses coordonnées géométriques (X, Y) ainsi que son angle d'orientation, et les affiche sur le retour vidéo afin de permettre une vérification des valeurs en direct.
+
+La dernière phase d'essais a validé la communication descendante. Les coordonnées calculées par Python sont transmises vers l'automate, qui les réceptionne et les stocke dans le bloc de données (DB) interne.
 
