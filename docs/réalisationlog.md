@@ -21,7 +21,7 @@ La réception du signal provenant du capteur de présence de la cellule a été 
 
 L'algorithme OpenCV traite l'image capturée. Le script isole le contenant, détermine ses coordonnées géométriques (X, Y) ainsi que son angle d'orientation, et les affiche sur le retour vidéo afin de permettre une vérification des valeurs en direct.
 
-Nous avons aussi pu validé la communication descendante avec l'outil de visualisation en direct  de TIA Portal. Les coordonnées calculées par Python et leur polarités sont bien transmises vers l'automate, qui les réceptionne et les stocke dans le bloc de données (DB) interne, ce qui doit permettre de les envoyer au robot par la suite.
+Nous avons aussi pu valider la communication descendante avec l'outil de visualisation en direct  de TIA Portal. Les coordonnées calculées par Python et leur polarités sont bien transmises vers l'automate, qui les réceptionne et les stocke dans le bloc de données (DB) interne, ce qui doit permettre de les envoyer au robot par la suite.
 
 # Difficultés techniques et solutions
 
