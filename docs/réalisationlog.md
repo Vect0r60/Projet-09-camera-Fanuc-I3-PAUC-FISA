@@ -9,11 +9,15 @@ title: Réalisations logicielle
 
 Pour valider le comportement du système de vision et sa communication, une série d'essais a été réalisée dans la cellule et sur l'automate :
 
-<img width="718" height="956" alt="image" src="https://github.com/user-attachments/assets/0a26b158-fc99-4072-b84c-c5e2f555ce24" />
+<img width="359" height="478" alt="image" src="https://github.com/user-attachments/assets/0a26b158-fc99-4072-b84c-c5e2f555ce24" />
 
 Les premiers tests ont confirmé la communication avec la caméra Basler. Le script Python assure la récupération continue du flux vidéo en direct, rendant les images disponibles pour la phase de traitement.
 
+<img width="945" height="499" alt="image" src="https://github.com/user-attachments/assets/6cee8379-e9ea-450d-bbb8-b35c20285c25" />
+
 La réception du signal provenant du capteur de présence de la cellule a été validée. Dès que l'automate détecte un contenant, il transmet une instruction au script Python, ce qui déclenche la capture de l'image à analyser.
+
+<img width="445" height="419" alt="image" src="https://github.com/user-attachments/assets/72728cda-fcc3-472f-817e-53928aab27ca" />
 
 L'algorithme OpenCV traite l'image capturée. Le script isole le contenant, détermine ses coordonnées géométriques (X, Y) ainsi que son angle d'orientation, et les affiche sur le retour vidéo afin de permettre une vérification des valeurs en direct.
 
